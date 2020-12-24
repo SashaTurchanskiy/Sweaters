@@ -14,12 +14,12 @@ public class MailSender {
     @Value("${spring.mail.username}")
     private String username;
 
-    public void send(String emailTo, String subject, String message){
+    void send(String emailTo, String message){
         SimpleMailMessage mailMessage = new SimpleMailMessage();
 
         mailMessage.setFrom(username);
         mailMessage.setTo(emailTo);
-        mailMessage.setSubject(subject);
+        mailMessage.setSubject("Activation code");
         mailMessage.setText(message);
 
         mailSender.send(mailMessage);

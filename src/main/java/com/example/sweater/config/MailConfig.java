@@ -40,6 +40,7 @@ public class MailConfig {
         properties.setProperty("mail.debug", debug);
         properties.setProperty("mail.smtp.auth", auth);
         properties.setProperty("mail.smtp.starttls.enable", enable);
+        properties.put("mail.smtp.ssl.trust", "smtp.gmail.com");
 
 
 
